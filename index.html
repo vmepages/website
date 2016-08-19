@@ -14,13 +14,13 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
-
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,7 +31,208 @@
 </head>
 
 <body>
+    <style type="text/css">
+                /*
+         * Start Bootstrap - Landing Page (http://startbootstrap.com/)
+         * Copyright 2013-2016 Start Bootstrap
+         * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+         */
 
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-weight: 700;
+        }
+
+        .topnav {
+            font-size: 14px;
+        }
+
+        .lead {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .intro-header {
+            padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+            padding-bottom: 50px;
+            text-align: center;
+            color: #f8f8f8;
+            background: url('./img/intro-bg.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .intro-message {
+            position: relative;
+            padding-top: 50px;
+            padding-bottom: 25px;
+        }
+
+        .intro-message > h1 {
+            margin: 0;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+            font-size: 5em;
+        }
+
+        .intro-divider {
+            width: 400px;
+            border-top: 1px solid #f8f8f8;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .intro-message > h3, h4 {
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+            margin-bottom: 20px;
+            line-height: 22px;
+        }
+
+        @media(max-width:767px) {
+            .intro-message {
+                padding-bottom: 15%;
+            }
+
+            .intro-message > h1 {
+                font-size: 3em;
+            }
+
+            ul.intro-social-buttons > li {
+                display: block;
+                margin-bottom: 20px;
+                padding: 0;
+            }
+
+            ul.intro-social-buttons > li:last-child {
+                margin-bottom: 0;
+            }
+
+            .intro-divider {
+                width: 100%;
+            }
+        }
+
+        .network-name {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .content-section-a {
+            padding: 50px 0;
+            background-color: #f8f8f8;
+        }
+
+        .content-section-b {
+            padding: 50px 0;
+            border-top: 1px solid #c7c7c7;
+            border-bottom: 1px solid #c7c7c7;
+            background-color: #e0eae5;
+        }
+
+        .section-heading {
+            margin-bottom: 15px;
+        }
+
+        .section-heading-spacer {
+            float: left;
+            width: 200px;
+            border-top: 3px solid #e7e7e7;
+        }
+
+        .banner {
+            padding: 100px 0;
+            color: #f8f8f8;
+            background: url(../img/banner-bg.jpg) no-repeat center center;
+            background-size: cover;
+        }
+
+        .banner h2 {
+            margin: 0;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+            font-size: 3em;
+        }
+
+        .banner ul {
+            margin-bottom: 0;
+        }
+
+        .banner-social-buttons {
+            float: right;
+            margin-top: 0;
+        }
+
+        @media(max-width:1199px) {
+            ul.banner-social-buttons {
+                float: left;
+                margin-top: 15px;
+            }
+        }
+
+        @media(max-width:767px) {
+            .banner h2 {
+                margin: 0;
+                text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+                font-size: 3em;
+            }
+
+            ul.banner-social-buttons > li {
+                display: block;
+                margin-bottom: 20px;
+                padding: 0;
+            }
+
+            ul.banner-social-buttons > li:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        footer {
+            padding: 50px 0;
+            background-color: #f8f8f8;
+        }
+
+        p.copyright {
+            margin: 15px 0 0;
+        }
+
+        .service-example {
+            padding: 15px;
+        }
+
+        .service-example h4 {
+            text-shadow: none;
+        }
+
+        .service-example .panel-heading {
+            background-color: #f0f5f5;
+        }
+
+        .service-example .fa {
+            margin-right: 7px;
+        }
+
+        .service-example .panel-body {
+            font-weight: 400;
+        }
+
+        .btn-primary {
+            background-color: #0064cd;
+            border-color: #00468f;
+        }
+    </style>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
@@ -43,20 +244,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">Start Bootstrap</a>
+                <a class="navbar-brand topnav" href="#">
+                    <img src="./img/logo.png" style="height: 30px;display: inline-block;margin-top: -5px;margin-right: 11px;">
+                    VerifyMyEnglish
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
+                        <a href="#services">What we do</a>
+                    </li>
+                    <li>
+                        <a href="#how-it-works">How it works</a>
+                    </li>
+                    <li>
+                        <a href="#pricing">Pricing</a>
+                    </li>
+                    <li>
                         <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="#about">FAQ</a>
                     </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+
+                        <a style="margin-left: 15px;"><button type="button" class="btn btn-primary navbar-btn">Submit</button></a>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -73,20 +285,29 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Be Professional</h1>
+                        <h1>Write Professionally</h1>
                         <h3>It will be worth it</h3>
                         <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
-                        </ul>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 text-left">
+                                <h4>We are a team of experienced editors from Canada and the United States and we will
+                                    be happy to proofread and edit your work.
+                                    </h4>
+                                    <h4>
+                                    We accept tasks of all sizes. Whether you're a non-native English speaker
+                                    who needs to proofread an important email or you want us to
+                                    edit your new E-book, we'll do it.
+                                        </h4>
+                                    <h4>
+                                    It's quick, easy, professional and we're sure that your audience will appreciate it.
+                                </h4>
+
+                                <div style="margin-top: 30px;">
+                                    <a class="btn btn-primary btn-lg btn-block">Submit a new task</a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,20 +325,155 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
+                <div class="col-xs-12">
+                    <h2 class="section-heading">Some popular tasks we've been handling:</h2>
                     <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
                 </div>
             </div>
+            <div class="row">
+                <div class="service-example col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">
+                              <i class="fa fa-shopping-cart fa-fw"></i>
+                              Online Stores
+                          </h3>
+                      </div>
+                      <div class="panel-body">
+                         <p>
+                          We've edited and proofread many product
+                             descriptions and user manuals
+                          for international sellers on <strong>Amazon, Ebay, Shopify, Etsy</strong> and individual websites.
+                          </p>
+                          <p>
+                          You can simply submit links to the pages you want us to look at.
+                          </p>
+                      </div>
+                    </div>
+                </div>
 
+                <div class="service-example col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">
+                              <i class="fa fa-newspaper-o fa-fw"></i>
+                              Blog Posts / News Articles
+                          </h3>
+                      </div>
+                      <div class="panel-body">
+                         <p>
+                          We work with native and non-native English speaking
+                             bloggers and publishers. It's always smart to have someone check
+                             your article before you publish it.
+                          </p>
+                          <p>
+                          For regular customers we offer editing articles directly
+                              from their <strong>Wordpress</strong> system using a
+                              user created for our team.
+                          </p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="service-example col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">
+                              <i class="fa fa-rocket fa-fw"></i>
+                               Pre-Launch Websites / Apps
+                          </h3>
+                      </div>
+                      <div class="panel-body">
+                         <p>
+                          We proofread text in websites and apps for Entrepreneurs from all over the world.
+                             Sometimes it's just the <em>About Us</em> page
+                             and sometimes entire websites.
+
+                          </p>
+                            <p>For large scale projects, we can do editing
+                                 directly in the <strong>HTML</strong> files
+                                    and even push changes
+                            to <strong>git</strong> so you can easily see what we fixed.</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="service-example col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">
+                              <i class="fa fa-briefcase fa-fw"></i>
+                              CVs / Job Applications
+                          </h3>
+                      </div>
+                      <div class="panel-body">
+                         <p>
+                             We've helped polish many CVs and received
+                             great responses from clients.
+                             </p>
+                          <p>
+                          This is probably the most important time to seek a professional
+                             editor. You don't want to miss your dream job
+                             because you had a few misspellings in your CV.
+                          </p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="service-example col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">
+                              <i class="fa fa-book fa-fw"></i>
+                              Books / E-books
+                          </h3>
+                      </div>
+                      <div class="panel-body">
+                         <p>
+                          Whether it's a recipes E-book for kindle or the novel you've been writing for years,
+                             we will make sure your readers will enjoy a book written in beautiful English.
+                          </p>
+                          <p>
+                            If you have your book as a Microsoft Word document (.doc/.docx) that's great
+                              but even if not, we'll do our best to work with whatever file format you have.
+                          </p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="service-example col-md-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">
+                              <i class="fa fa-graduation-cap fa-fw"></i>
+                              Academic Papers and Essays
+                          </h3>
+                      </div>
+                      <div class="panel-body">
+                         <p>
+                          We've edited Academic research papers and students essays on various
+                             different fields and subjects.</p>
+                          <p>
+                          In case the subject of your paper requires some specific domain knowledge, please
+                              <a href="#about">contact us</a> to make sure we can
+                              provide you with editing services in this domain.
+                          </p>
+                      </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.container -->
+        <script type="text/javascript">
+            var heights = $(".service-example .panel-body").map(function() {
+                return $(this).height();
+            }).get(),
 
+            maxHeight = Math.max.apply(null, heights) - 15;
+
+            $(".service-example .panel-body").height(maxHeight);
+
+        </script>
     </div>
     <!-- /.content-section-a -->
 
