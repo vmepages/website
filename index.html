@@ -69,7 +69,7 @@
             padding-bottom: 50px;
             text-align: center;
             color: #f8f8f8;
-            background: url('./img/intro-bg.jpg') no-repeat center center;
+            background: url('img/intro-bg.jpg') no-repeat center center;
             background-size: cover;
         }
 
@@ -125,7 +125,7 @@
 
         .network-name {
             text-transform: uppercase;
-            font-size: 14px;
+            font-size: 0.6em;
             font-weight: 400;
             letter-spacing: 2px;
         }
@@ -139,7 +139,7 @@
             padding: 50px 0;
             border-top: 1px solid #c7c7c7;
             border-bottom: 1px solid #c7c7c7;
-            background-color: #e0eae5;
+            background-color: #ceddec;
         }
 
         .section-heading {
@@ -152,10 +152,16 @@
             border-top: 3px solid #e7e7e7;
         }
 
+        .section-heading-spacer-b {
+            float: left;
+            width: 200px;
+            border-top: 3px solid #efefef;
+        }
+
         .banner {
             padding: 100px 0;
             color: #f8f8f8;
-            background: url(../img/banner-bg.jpg) no-repeat center center;
+            background: url(img/banner-bg.jpg) no-repeat center center;
             background-size: cover;
         }
 
@@ -217,7 +223,8 @@
         }
 
         .service-example .panel-heading {
-            background-color: #f0f5f5;
+            /*background-color: #f0f5f5;*/
+            background-color: #ceddec;
         }
 
         .service-example .fa {
@@ -232,6 +239,73 @@
             background-color: #0064cd;
             border-color: #00468f;
         }
+
+        .panel-primary {
+            border-color: #4c92dc;
+        }
+
+        .panel-primary > .panel-heading {
+            background-color: #4c92dc;
+        }
+
+        .panel-primary hr {
+            border-color: #4c92dc;
+        }
+
+        .number-circle {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+
+            -moz-border-radius: 25px;
+            border-radius: 25px;
+
+            background-color: #f8f8f8;
+            color: #888;
+            text-align: center;
+            font-size: 1.6em;
+        }
+
+        .process-section-title {
+            display: inline-block;
+            margin-left: 15px;
+            font-size: 1.5em;
+        }
+
+        .process-section-description {
+            color: #888;
+            margin-left: 70px;
+            font-size: 1.1em;
+            font-weight: 400;
+        }
+
+        .price-number {
+            font-size: 3em;
+        }
+
+        .price-text {
+            font-size: 1.2em;
+            color: #888;
+        }
+
+        .price-comment .fa {
+            color: #4c92dc;
+            font-size: 1.3em;
+            margin-right: 5px;
+        }
+
+        .price-comment {
+            font-size: 1.1em;
+        }
+
+        .contact-section-title {
+            font-size: 1.2em;
+        }
+
+        .contact-section-title .fa {
+            margin-right: 5px;
+        }
     </style>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -245,7 +319,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand topnav" href="#">
-                    <img src="./img/logo.png" style="height: 30px;display: inline-block;margin-top: -5px;margin-right: 11px;">
+                    <img src="img/logo.png" style="height: 30px;display: inline-block;margin-top: -5px;margin-right: 11px;">
                     VerifyMyEnglish
                 </a>
             </div>
@@ -253,7 +327,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#services">What we do</a>
+                        <a href="#what-we-do">What we do</a>
                     </li>
                     <li>
                         <a href="#how-it-works">How it works</a>
@@ -265,7 +339,7 @@
                         <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#about">FAQ</a>
+                        <a href="#faq">FAQ</a>
                     </li>
 
                         <a style="margin-left: 15px;"><button type="button" class="btn btn-primary navbar-btn">Submit</button></a>
@@ -276,9 +350,17 @@
         <!-- /.container -->
     </nav>
 
-
+    <script type="text/javascript">
+        $(function() {
+            $('.nav a').on('click', function(){
+                if($('.navbar-toggle').css('display') !='none'){
+                    $(".navbar-toggle").trigger( "click" );
+                }
+            });
+        });
+    </script>
     <!-- Header -->
-    <a name="about"></a>
+    <a name="intro"></a>
     <div class="intro-header">
         <div class="container">
 
@@ -320,13 +402,13 @@
 
     <!-- Page Content -->
 
-	<a  name="services"></a>
+	<a id="what-we-do"></a>
     <div class="content-section-a">
 
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h2 class="section-heading">Some popular tasks we've been handling:</h2>
+                    <h2 class="section-heading">Some popular tasks we've been handling</h2>
                     <hr class="section-heading-spacer">
                 </div>
             </div>
@@ -393,7 +475,7 @@
                             <p>For large scale projects, we can do editing
                                  directly in the <strong>HTML</strong> files
                                     and even push changes
-                            to <strong>git</strong> so you can easily see what we fixed.</p>
+                            to <strong>git</strong>, so you can easily see what we fixed.</p>
                       </div>
                     </div>
                 </div>
@@ -464,32 +546,72 @@
             </div>
         </div>
         <!-- /.container -->
-        <script type="text/javascript">
-            var heights = $(".service-example .panel-body").map(function() {
-                return $(this).height();
-            }).get(),
 
-            maxHeight = Math.max.apply(null, heights) - 15;
-
-            $(".service-example .panel-body").height(maxHeight);
-
-        </script>
     </div>
     <!-- /.content-section-a -->
 
+    <a id="how-it-works"></a>
     <div class="content-section-b">
 
         <div class="container">
-
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
+                <div class="col-xs-12">
+                    <h2 class="section-heading">It's easier than you might think</h2>
+                    <!--<img class="img-responsive pull-right" style="height:100px;margin-top: -70px;margin-left: 500px;" src="img/paperplane_line.png" alt="">-->
+                    <hr class="section-heading-spacer-b">
                 </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/dog.png" alt="">
+            </div>
+            <div class="row" style="margin-top: 15px;">
+                <!--<div class="col-xs-12">-->
+
+                <!--</div>-->
+                <div class="col-md-4">
+                    <div>
+                        <div class="number-circle">1</div>
+                        <div class="process-section-title">Submit a new task</div>
+                        <div class="process-section-description">
+                            <p>We'll ask for your email
+                            address and the text you want us to proofread or edit.
+                            </p>
+                            <p>You can submit your text in a Microsoft Word file or any other
+                                file type, we'll do our best
+                                to work with whatever you submit. </p><p>You can also
+                            submit links to web-pages you want us to edit or
+                        to documents stored in cloud storage (e.g. GoogleDrive, Dropbox, OneDrive). </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <div class="number-circle">2</div>
+                        <div class="process-section-title">Accept our offer</div>
+                        <div class="process-section-description">
+                            <p>Shortly after submiting, you'll recieve an email from us
+                                with the exact price for your task and our estimated time to finish it.
+                                Simple tasks usually take 24 hours or less.
+                            </p>
+                            <p>The email will contain a link to a payment page,
+                            you'll be able to pay using your credit/debit card or PayPal account.</p>
+                            <p>Once you've paid, we will be
+                            automatically notified and start working on your task.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <div class="number-circle">3</div>
+                        <div class="process-section-title">Recieve the result</div>
+                        <div class="process-section-description">
+                            <p>We will send the result by email.</p>
+                            <p>Normally we attach two Microsoft Word documents. One with your
+                                fixed text that's ready for publishing, the other
+                                with the original text and inline comments on every mistake
+                             we've fixed.</p>
+                            <p>We might be able to provide the result
+                                in a different format, you can request it
+                            when you submit your task.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -499,19 +621,93 @@
     </div>
     <!-- /.content-section-b -->
 
+    <a id="pricing"></a>
     <div class="content-section-a">
 
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
+                <div class="col-xs-12">
+                    <h2 class="section-heading">Professional editing at an affordable price</h2>
+                    <!--<img class="img-responsive pull-right" style="height:100px;margin-top: -70px;margin-left: 500px;" src="img/paperplane_line.png" alt="">-->
                     <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/phones.png" alt="">
+            </div>
+
+            <div class="row text-center" style="margin-top: 15px;">
+
+                <div class="col-md-3 col-md-offset-3 col-sm-6 pricing-item">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">
+                              Proofreading
+                          </h3>
+                      </div>
+                      <div class="panel-body">
+                         <p>
+                            <span class="price-number">$ 0.05</span><span class="price-text"> / word</span>
+                          </p>
+                          <hr/>
+                            <div class="text-left">
+                                <p>
+                                    A professional editor who's a native English speaker
+                                    will fix any spelling or grammar mistakes in your text.</p>
+                                <p>
+                                    We will also fix sentences and replace words that could be technically correct
+                                    but may sound awkward to a native English speaking audience.
+                                </p>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 pricing-item">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">
+                              Proofreading + Editing
+                          </h3>
+                      </div>
+                      <div class="panel-body">
+                         <p>
+                            <span class="price-number">$ 0.10</span><span class="price-text"> / word</span>
+                          </p>
+                          <hr/>
+                            <div class="text-left">
+                                <p>
+                                    In addition to proofreading, you will also get
+                                a professional editing service to improve the final result.</p>
+                                <p>
+                                    If your text contains repetetive ideas, unclear statements and
+                                    other potential problems, it may look unprofessional
+                                    to some readers. We will fix that for you.
+                                </p>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" style="margin-top: 15px;">
+                <div class="col-md-6 col-md-offset-3 price-comment">
+                    <p>
+                        <i class="fa fa-check fa-fw"></i>
+                        All prices are in US Dollars and include all taxes.
+                    </p>
+                    <p>
+                        <i class="fa fa-check fa-fw"></i>
+                        We accept payments with credit cards, debit cards and PayPal.
+                    </p>
+                    <p>
+                        <i class="fa fa-check fa-fw"></i>
+                        We accept even tiny tasks. However, the minimum charge is $2.
+                    </p>
+                    <p>
+                        <i class="fa fa-check fa-fw"></i>
+                        We offer volume discounts for large tasks. <a href="#about">Contact us</a>
+                        for details.
+                    </p>
                 </div>
             </div>
 
@@ -521,7 +717,112 @@
     </div>
     <!-- /.content-section-a -->
 
-	<a  name="contact"></a>
+	<a id="about"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="section-heading">Your private team of editors</h2>
+                    <hr class="section-heading-spacer-b">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 15px;">
+                <div class="col-md-6 about-section" style="font-weight: 400;">
+                    <div class="text-center" style="margin-bottom: 25px;">
+                        <img style="height: 140px;" class="img-circle" src="img/naomi.jpg">
+                        <p style="margin-top: 7px;font-size:1.2em;font-weight: 600;">Hey, I'm Naomi, Founder of VerifyMyEnglish.</p>
+                    </div>
+                    <p>
+                        I'm from Edmonton, Canada. I hold a Bachelor degree in English from the
+                        University of Texas and I've been working in the writing and
+                        editing world for over 10 years.
+                    </p>
+                    <p>
+                        I've worked as a Copy Writer/Editor, Journalist, Communications Manager,
+                        PR Specialist, Freelance Writer and even as an English Teacher.
+                    </p>
+                    <p>
+                        The team of VerifyMyEnglish consists of me and 4 other professional
+                        editors from Canada and the US. Each team member has a university
+                        degree in English and years of
+                        experience as an Editor.
+                    </p>
+                    <p>
+                        Our team has processed thousands of editing jobs and
+                        nothing makes us happier than having another happy client.
+                        If you need an editor for your project and have some questions
+                        please contact us and we promise to reply quickly.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default about-section" style="background-color: #d7e3ef;border-color: #f0f0f0;">
+                       <div class="panel-body">
+                           <p class="text-center" style="font-size: 30px;">Let's talk!</p>
+                           <hr/>
+                           <p class="contact-section-title">
+                               <i class="fa fa-envelope fa-fw"></i>
+                               Email
+                           </p>
+                           <div class="panel panel-default text-center" style="padding:10px;">
+                               <a href="">team@verifymyenglish.com</a>
+                           </div>
+                           <p class="contact-section-title">
+                               <i class="fa fa-phone fa-fw"></i>
+                               Phone / Whatsapp
+                           </p>
+                           <div class="panel panel-default text-center" style="padding:10px;">
+                               <a href="">+1 999 888 777</a>
+                           </div>
+                           <p class="contact-section-title">
+                               <i class="fa fa-user fa-fw"></i>
+                               Social
+                           </p>
+                           <div class="row">
+                               <div class="col-xs-4" style="padding-right: 7px;">
+                                   <a class="btn btn-default btn-lg btn-block"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                               </div>
+                               <div class="col-xs-4" style="padding-left: 0px;padding-right: 0px;">
+                                   <a class="btn btn-default btn-lg btn-block"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                               </div>
+                               <div class="col-xs-4" style="padding-left: 7px;">
+                                   <a class="btn btn-default btn-lg btn-block"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <script type="text/javascript">
+        function resizeColumns() {
+            var colSelectors = ['.service-example .panel-body', '.pricing-item .panel-body', '.about-section'];
+            var colSelectorsLength = colSelectors.length;
+            for (var i = 0; i < colSelectorsLength; i++) {
+                var colSelector = colSelectors[i];
+                $(colSelector).css('height', '');
+                var heights = $(colSelector).map(function () {
+                    return $(this).height();
+                }).get();
+
+                var maxHeight = Math.max.apply(null, heights) - 5;
+
+                $(colSelector).height(maxHeight);
+            };
+        };
+
+        resizeColumns();
+
+        $(window).on('resize', function(){resizeColumns()});
+
+    </script>
+
     <div class="banner">
 
         <div class="container">
@@ -578,10 +879,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
