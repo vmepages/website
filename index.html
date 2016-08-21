@@ -161,8 +161,7 @@
         .banner {
             padding: 100px 0;
             color: #f8f8f8;
-            background: url(img/banner-bg.jpg) no-repeat center center;
-            background-size: cover;
+            background-image: linear-gradient(rgba(70, 70, 70, 0.8),rgba(70, 70, 70, 0.8)),url('img/banner-bg.jpg');
         }
 
         .banner h2 {
@@ -304,6 +303,37 @@
         }
 
         .contact-section-title .fa {
+            margin-right: 5px;
+        }
+
+        .faq-q {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .faq-a {
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .review-img {
+            height: 100px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .review-title {
+            font-size: 1.3em;
+        }
+
+        .review-content {
+            font-weight: 400;
+            font-size: 1.1em;
+        }
+
+        .review-content .fa {
+            font-size: 0.7em;
+            margin-left: 5px;
             margin-right: 5px;
         }
     </style>
@@ -728,7 +758,7 @@
                 </div>
             </div>
             <div class="row" style="margin-top: 15px;">
-                <div class="col-md-6 about-section" style="font-weight: 400;">
+                <div class="col-md-6 about-section" style="font-weight: 400;margin-bottom: 30px;">
                     <div class="text-center" style="margin-bottom: 25px;">
                         <img style="height: 140px;" class="img-circle" src="img/naomi.jpg">
                         <p style="margin-top: 7px;font-size:1.2em;font-weight: 600;">Hey, I'm Naomi, Founder of VerifyMyEnglish.</p>
@@ -746,7 +776,7 @@
                         The team of VerifyMyEnglish consists of me and 4 other professional
                         editors from Canada and the US. Each team member has a university
                         degree in English and years of
-                        experience as an Editor.
+                        experience as an editor.
                     </p>
                     <p>
                         Our team has processed thousands of editing jobs and
@@ -800,9 +830,178 @@
     </div>
     <!-- /.content-section-b -->
 
+    <a id="faq"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="section-heading">Frequently asked questions</h2>
+                    <hr class="section-heading-spacer">
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 15px;">
+                <div class="col-md-4 col-sm-6 col-xs-12 faq-section">
+                    <div class="faq-q">
+                        Do I have to submit a Microsoft Word document?
+                    </div>
+                    <div class="faq-a">
+                        <p>No, you can submit any file format.</p>
+                        <p>We'll do our best to
+                        work with the text from your file. If we can't process your file we will
+                        contact you and ask for a different file format.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12 faq-section">
+                    <div class="faq-q">
+                        Can I submit links to webpages?
+                    </div>
+                    <div class="faq-a">
+                        <p>
+                        Yes, you can link to any webpage and tell us which
+                        part you want us to look at.</p>
+                        <p>If you have a page that's not
+                        publicly accessible (like a draft post in Wordpress) you can
+                        save the HTML file to your computer and send it to us.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12 faq-section">
+                    <div class="faq-q">
+                        How much time until I receive the result?
+                    </div>
+                    <div class="faq-a">
+                        <p>Simple tasks of up to a few pages are usually done within 24 hours.</p>
+                        <p>Larger tasks may take longer, depending on the size.
+                        After you submit your task we'll review it and email you an offer along
+                        with the time we expect to finish.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12 faq-section">
+                    <div class="faq-q">
+                        I need something urgently, can I ask for a rush-order?
+                    </div>
+                    <div class="faq-a">
+                        <p>Yes, you can request it when you submit your task, it usually
+                        costs 50% more.</p>
+                        <p>
+                            If we have an editor available immediately then
+                            we will quickly send you an offer with the best finish
+                            time we can.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12 faq-section">
+                    <div class="faq-q">
+                        What will the result look like?
+                    </div>
+                    <div class="faq-a">
+                        <p>Normally we email back two Microsoft Word documents. One with your
+                                fixed text that's ready for publishing, the other
+                                with the original text and inline comments on every mistake
+                             we've fixed.</p>
+                            <p>We might be able to provide the result
+                                in a different format, you can request it
+                            when you submit your task.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12 faq-section">
+                    <div class="faq-q">
+                        I need you to edit an entire book, is there a discount?
+                    </div>
+                    <div class="faq-a">
+                        <p>Yes, we offer volume discounts for large scale tasks.</p>
+                        <p>The discount will be based on the size of your task, you can
+                            submit your task regularly and we'll email you the offer
+                        including the discount. You can also <a href="#about">contact us</a> and generally describe
+                        the size of your task and we'll give you an estimated price.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 style="font-size: 30px;">We're happy when our clients are happy</h2>
+                    <hr class="section-heading-spacer" style="margin-top: 35px;margin-bottom: 20px;" />
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="text-center" class="review-section">
+                        <img class="img-circle review-img" src="img/lina.jpg">
+                        <p class="review-title">
+                            Lina, a Travel Blogger from Germany
+                        </p>
+                        <p class="review-content text-left">
+                            <i class="fa fa-quote-left fa-fw"></i>
+                            I have been blogging in English for years and have used other proofreading services
+                            but they always missed some grammer mistakes, your service is the best!
+                            <i class="fa fa-quote-right fa-fw"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="text-center" class="review-section">
+                        <img class="img-circle review-img" src="img/kwan.jpg">
+                        <p class="review-title">
+                            Kwan, a PHD student from Korea
+                        </p>
+                        <p class="review-content text-left">
+                            <i class="fa fa-quote-left fa-fw"></i>
+                            I found you on Google when I needed someone to
+                            check my scholarship application, you impressed me
+                            so now I send you for a review every research paper I make.
+                            <i class="fa fa-quote-right fa-fw"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="text-center" class="review-section">
+                        <img class="img-circle review-img" src="img/argelio.jpg">
+                        <p class="review-title">
+                            Argelio, a Programmer from Mexico
+                        </p>
+                        <p class="review-content text-left">
+                            <i class="fa fa-quote-left fa-fw"></i>
+                            I build websites for clients from the US and was always embarrassed
+                            when they asked me to fix the language mistakes, now you
+                            makes me look a lot more professional.
+                            <i class="fa fa-quote-right fa-fw"></i>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
     <script type="text/javascript">
         function resizeColumns() {
-            var colSelectors = ['.service-example .panel-body', '.pricing-item .panel-body', '.about-section'];
+            var colSelectors = ['.service-example .panel-body', '.pricing-item .panel-body', '.about-section', '.faq-section', '.review-section'];
             var colSelectorsLength = colSelectors.length;
             for (var i = 0; i < colSelectorsLength; i++) {
                 var colSelector = colSelectors[i];
@@ -823,34 +1022,6 @@
 
     </script>
 
-    <div class="banner">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect to Start Bootstrap:</h2>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.banner -->
 
     <!-- Footer -->
     <footer>
@@ -863,18 +1034,26 @@
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
+                            <a href="#what-we-do">What we do</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#how-it-works">How it works</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#pricing">Pricing</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
                             <a href="#about">About</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#contact">Contact</a>
+                            <a href="#faq">FAQ</a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+                    <p class="copyright text-muted small" style="margin-top: 30px;">Copyright &copy; VerifyMyEnglish <script type="text/javascript">document.write(new Date().getFullYear())</script>. All Rights Reserved</p>
                 </div>
             </div>
         </div>
